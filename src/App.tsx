@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import DogDetails from "./DogDetails";
 
 const App: React.FC = () => {
+  const onBark = () => {
+    alert('Woof');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <DogDetails
+          name="Zeus"
+          onBark={onBark}
+          imageUrl="https://ichef.bbci.co.uk/news/624/cpsprodpb/29BB/production/_107038601_gettyimages-1041987488.jpg"
+        />
       </header>
     </div>
   );
-}
+};
 
 export default App;
