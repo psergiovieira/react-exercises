@@ -3,24 +3,59 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/enzyme": "3.10.3",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.4",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.14.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
     "react-scripts": "3.1.1",
+    "ts-jest": "^24.1.0",
     "typescript": "3.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest test --verbose --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/config/setupTests.js"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.(js|jsx)$": "<rootDir>node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>node_modules/react-scripts/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json|tsx|ts)$)": "<rootDir>node_modules/react-scripts/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|tsx|ts)$"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "tsx",
+      "ts"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  },
+  "babel": {
+		"presets": [
+			"react-app"
+		]
+	},
   "browserslist": {
     "production": [
       ">0.2%",
