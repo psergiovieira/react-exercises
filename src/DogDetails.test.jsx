@@ -9,7 +9,11 @@ describe("Dogetails", () => {
     onBark: jest.fn()
   };
 
-  let wrapper = shallow(<DogDetails {...props} />);
+  let wrapper;
+	beforeEach(() => {
+    wrapper = shallow(<DogDetails {...props} />);
+  });
+  
   const idName = 'h2[id="idName"]';
   const idImage = 'img[id="idImage"]';
   const idBarkButton = 'button[id="idBarkButton"]';
@@ -46,7 +50,7 @@ describe("Dogetails", () => {
     wrapper.find(idScoldButton).simulate("click");
     wrapper.find(idScoldButton).simulate("click");
 
-    expect(wrapper.find(idCount).text()).toBe("5");
+    expect(wrapper.find(idCount).text()).toBe("4");
   });
 
   it("should bind with props passed", () => {
