@@ -17,9 +17,9 @@ function CreateBeerForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="idName">Beer Name:</label>
+    <div id="idMainDiv">
+      <form onSubmit={handleSubmit} id="idForm">
+        <label id="idLabelName" htmlFor="idName">Beer Name:</label>
         <input
           type="text"
           value={beerName}
@@ -31,7 +31,7 @@ function CreateBeerForm() {
         />
 
         <br />
-        <label htmlFor="idBeerType"> Beer Type:</label>
+        <label id="idLabelBeerType" htmlFor="idBeerType"> Beer Type:</label>
         <select
           id="idBeerType"
           name="beerType"
@@ -46,15 +46,15 @@ function CreateBeerForm() {
         </select>
 
         <br />
-        <label htmlFor="idHasCorn"> Has corn: </label>
+        <label id="idHasCornLabel" htmlFor="idHasCorn"> Has corn: </label>
         <input
-          name="idHasCorn"
+          id="idHasCorn"
           type="checkbox"
           checked={hasCorn}
           onChange={event => setHasCorn(!hasCorn)}
         />
         <br />
-        <label> Ingredients: </label>
+        <label id="idLabelIdIngredients" htmlFor="idIngredients"> Ingredients: </label>
         <textarea
           id="idIngredients"
           name="ingredients"
@@ -63,7 +63,7 @@ function CreateBeerForm() {
         />
 
         <br/>
-        <button type="submit" value="Submit">Submit</button>
+        <button id="idSubmitButton" type="submit" value="Submit">Submit</button>
       </form>
     </div>
   );
