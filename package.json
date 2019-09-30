@@ -10,10 +10,11 @@
     "@types/react-dom": "16.9.0",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
+    "formik": "1.5.8",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-scripts": "3.1.1",
-    "ts-jest": "^24.1.0",
+    "ts-jest": "24.1.0",
     "typescript": "3.6.2"
   },
   "scripts": {
@@ -52,10 +53,10 @@
     }
   },
   "babel": {
-		"presets": [
-			"react-app"
-		]
-	},
+    "presets": [
+      "react-app"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
