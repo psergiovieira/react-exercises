@@ -6,8 +6,8 @@ import CreateBeerFormikForm from './CreateBeerFormikForm';
 import BeerEntity from "./BeerEntity";
 
 const App: React.FC = () => {
-  const onSubmit = (beerEntity: BeerEntity): void => {
-    console.log(beerEntity.beerName);
+  const onSubmit = (values: BeerEntity): void => {
+    console.log(values.beerName, values.beerType, values.hasCorn, values.ingredients);
   }
 
   return (

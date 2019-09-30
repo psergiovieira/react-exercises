@@ -26,13 +26,13 @@ function CreateBeerFormikForm(props: Props) {
     return (
       <FormikForm>
         <h1>Teste</h1>
-        <label id="idLabelName" htmlFor="idNameBeer">
+        <label id="idLabelName" htmlFor="idBeerName">
           Beer Name:
         </label>
         <Field
           type="text"
-          id="idNameBeer"
-          name="nameBeer"
+          id="idBeerName"
+          name="beerName"
           placeholder="Beer Name"
         />
 
@@ -60,8 +60,9 @@ function CreateBeerFormikForm(props: Props) {
           Ingredients:{" "}
         </label>
         <Field  component="textarea" rows="4" id="idIngredients" name="ingredients" />
-
         <br />
+
+        <button type="submit">Submit</button>
       </FormikForm>
     );
   };
