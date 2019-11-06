@@ -65,9 +65,10 @@ describe("CreateBeerForm", () => {
     const mockedEvent = {
       preventDefault: jest.fn(),
       target: {elements:{ name:{}}}           
-    };
+    };    
 
     wrapper.find(form).simulate("submit", mockedEvent);
     expect(console.log).toHaveBeenCalledTimes(2);
   });
+
 });

@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest test --verbose --watch",
+    "test": "jest test --verbose --watch --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -54,6 +54,7 @@
       "^react-native$": "react-native-web"
     }
   },
+  "jest.showCoverageOnLoad": true,
   "babel": {
     "presets": [
       "react-app"

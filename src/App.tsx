@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import DogDetails from "./DogDetails";
 import CreateBeerForm from "./CreateBeerForm";
-import CreateBeerFormikForm from './CreateBeerFormikForm';
-import BeerEntity from "./BeerEntity";
+import CreateBeerFormikForm from './Components/CreateBeerFormik/CreateBeerFormikForm';
+import BeerEntity from "./models/BeerEntity";
 
 const App: React.FC = () => {
   const onSubmit = (values: BeerEntity): void => {
@@ -12,7 +12,8 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <CreateBeerFormikForm onSubmit={onSubmit} />
+      {/* <CreateBeerFormikForm onSubmit={onSubmit} /> */}
+      <CreateBeerForm />
     </div>
   );
 };
